@@ -3,19 +3,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int ageToVote = 18;
+        System.out.println("Methods 1");
+        Vote.vote();
 
-        Scanner canVote = new Scanner(System.in);
-
-        System.out.println("Please enter your age");
-
-        int canIVote = canVote.nextInt();
-
-        if (canIVote >= ageToVote) {
-            System.out.println("You're eligible to vote");
-        } else {
-            System.out.println("You're not eligible to vote");
-        }
         System.out.println("Methods 2");
         System.out.println(MinMax.getMax(1,18,18));
         System.out.println(MinMax.getMin(1,18,-8));
@@ -24,8 +14,32 @@ public class Main {
         EvenOrOdd.evenOrOdd();
 
         System.out.println("Methods 4");
+        NameInitials.nameInitials();
 
-        System.out.println("Claases & Objects");
+        System.out.println("Classes & Objects");
         System.out.println("Car & Driver");
+
+        Car Porsche = new Car("Porsche 911 Cabriolet", 24000000);
+        System.out.println(Porsche);
+        Porsche.Start();
+        Porsche.Move();
+
+        Driver Slavko = new Driver("Slavko", 24);
+        System.out.println(Slavko);
+        Slavko.Driving();
+
+        System.out.println("Employee");
+        Employee Ib = new Employee("Ib", "Langstang", 37000);
+        System.out.println(Ib);
+
+        Employee Bo = new Employee("Bo", "Palmgren", 26000);
+        System.out.println(Bo);
+
+        Ib.yearlySalary();
+        Bo.yearlySalary();
+
+        Ib.yearlySalaryWithRaise();
+        Bo.yearlySalaryWithRaise();
+
     }
 }
